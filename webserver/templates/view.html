@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View Pastes</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={{url_for('static', filename="styles/main.css")}}>
+    <link rel="stylesheet" href={{url_for('static', filename="styles/view.css")}}>
+  </head>
+  <body>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <div class="nav-menu">
+          <div class="nav-menu-item">
+            <a href={{url_for("home_page")}}>HOME</a>
+          </div>
+          <div class="nav-menu-item">
+            <a href={{url_for("create_page")}}>CREATE</a>
+          </div>
+          <div class="nav-menu-item">
+            <a href={{url_for("view_page")}}>VIEW</a>
+          </div>
+        </div>
+        <div class="nav-title">
+          <span>GROUP B PASTE SITE</span>
+        </div>
+      </nav>
+  
+      <!-- Header -->
+      <header>
+        <h1>View Recent Pastes</h1>
+      </header>
+
+      <div class="view-page">
+
+        <table class="paste-list">
+
+          <thead class="paste-list-head">
+            <th>Title</th>
+            <th>Author</th>
+            <th>Created At</th>
+            <th>Views</th>
+          </thead>
+
+          <tbody class="paste-list-body">
+
+            {% for paste in pastes %}
+            <tr class="paste-list-item">
+              <td><a href={{url_for("view_paste_page", view_id=paste.get("viewId"))}} class="paste-list-item-title">{{paste.title}}</a></td>
+              <td>{{paste.get("author")}}</td>
+              <td>{{formatter(paste.get("createdAt"))}}</td>
+              <td>{{paste.get("viewCount")}}</td>
+            </tr>
+            {% endfor %}
+
+          </tbody>
+
+        </table>
+
+      </div>
+      
+  </body>
+</html>

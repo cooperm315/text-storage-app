@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Paste</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={{url_for('static', filename="styles/main.css")}}>
+    <link rel="stylesheet" href={{url_for('static', filename="styles/form.css")}}>
+  </head>
+  <body>
+
+    <!-- Navigation Menu -->
+    <nav>
+      <div class="nav-menu">
+        <div class="nav-menu-item">
+          <a href={{url_for("home_page")}}>HOME</a>
+        </div>
+        <div class="nav-menu-item">
+          <a href={{url_for("create_page")}}>CREATE</a>
+        </div>
+        <div class="nav-menu-item">
+          <a href={{url_for("view_page")}}>VIEW</a>
+        </div>
+      </div>
+      <div class="nav-title">
+        <span>GROUP B PASTE SITE</span>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+      <h1>Edit Your Paste</h1>
+    </header>
+
+    <!-- Page Content -->
+    <div class="form-page">
+
+      <form class="form-body" method="POST" >
+
+        <input name="viewId" type="hidden" value={{paste.get("viewId")}}>
+
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input name="title" type="text" placeholder="Your Title" required="true" value="{{paste.get("title")}}"/>
+        </div>
+  
+        <div class="form-group">
+          <label for="author">Author</label>
+          <input name="author" type="text" placeholder="Your Name" required="true" value="{{paste.get("author")}}"/>
+        </div>
+
+        <div class="form-group">
+          <label for="content">Content</label>
+          <textarea name="content" placeholder="Your Content" required="true>">{{paste.get("content")}}</textarea>
+        </div>
+
+        <div class="form-check-group">
+          {% if paste.get("unlisted") %}
+            <input name="unlisted" type="checkbox" checked="checked"/>
+          {% else %}
+            <input name="unlisted" type="checkbox"/>
+          {% endif %}
+          <label for="unlisted">Unlisted</label>
+        </div>
+
+        <button>EDIT PASTE</button>
+
+      </form>
+
+      <form method="POST" action="/delete/{{paste.get("editId")}}">
+        <button>DELETE PASTE</button>
+      </form>
+
+    </div>
+  </body>
+</html>

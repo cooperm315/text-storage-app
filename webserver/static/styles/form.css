@@ -1,0 +1,90 @@
+.form-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-page .form-body {
+    background-color: var(--gray4);
+    border: .15rem solid var(--gray1);
+    margin: 2rem;
+    padding: 1rem;
+    width: 80%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-page .form-group {
+    font-size: 1.4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-page .form-check-group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.form-page .form-check-group label {
+    user-select: none;
+    cursor: pointer;
+}
+
+.form-page .form-check-group input {
+    cursor: pointer;
+}
+
+.form-page .form-group label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-left: .5rem;
+    margin-bottom: .5rem;
+    user-select: none;
+}
+
+.form-page input[type="text"], .form-page textarea {
+    padding: .5rem;
+    border: .1rem solid var(--gray4);
+    font: var(--font);
+    border-radius: .5rem;
+    font-size: 1rem;
+}
+
+.form-page input[type="text"] {
+    width: 50%;
+}
+
+.form-page textarea {
+    height: 20rem;
+    resize: none;
+}
+
+.form-page input[type="text"]:focus, .form-page textarea:focus {
+    outline: none;
+    border: .1rem solid var(--orange2);
+}
+
+.form-page button {
+    padding: .5rem 1rem;
+    border: .1rem solid var(--gray4);
+    font: var(--font);
+    border-radius: .5rem;
+    font-size: 1rem;
+    background-color: var(--unh-blue);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.form-page button:disabled {
+    opacity: 50%;
+    cursor: not-allowed;
+}

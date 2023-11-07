@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+/* UNH Color Styles */
+:root {
+    --font: "Source Sans Pro", sans-serif;
+    --unh-blue: #003591;
+    --blue1: #001d52;
+    --blue2: #0044bb;
+    --orange1: #cb4d0b;
+    --orange2: #f77a05;
+    --gray1: #263645;
+    --gray2: #5c6874;
+    --gray3: #A3A9AC;
+    --gray4: #dcdedf;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--gray1);
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+}
+
+
+/* Header Styling */
+header {
+    background-color: var(--unh-blue);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    user-select: none;
+}
+
+
+/* NavBar Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--blue1);
+    color: #ffffff;
+}
+
+nav > div {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+nav .nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+nav .nav-title {
+    user-select: none;
+}
+
+nav a, nav a:visited, nav .nav-title {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: .8rem;
+    padding: .5rem;
+}
+
+nav a:hover {
+    color: var(--orange1);
+}

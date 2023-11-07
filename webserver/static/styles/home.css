@@ -1,0 +1,27 @@
+.home-page {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.home-page button {
+    background-color: var(--orange1);
+    border: .1rem solid var(--gray4);
+    color: #ffffff;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.home-page button:hover {
+    background-color: var(--orange2);
+}
+
+.home-page a {
+    text-decoration: none;
+    color: inherit;
+}

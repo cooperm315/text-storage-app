@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Group B Paste Site</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={{url_for('static', filename="styles/main.css")}}>
+    <link rel="stylesheet" href={{url_for('static', filename="styles/home.css")}}>
+  </head>
+  <body>
+
+    <!-- Navigation Menu -->
+    <nav>
+      <div class="nav-menu">
+        <div class="nav-menu-item">
+          <a href={{url_for("home_page")}}>HOME</a>
+        </div>
+        <div class="nav-menu-item">
+          <a href={{url_for("create_page")}}>CREATE</a>
+        </div>
+        <div class="nav-menu-item">
+          <a href={{url_for("view_page")}}>VIEW</a>
+        </div>
+      </div>
+      <div class="nav-title">
+        <span>GROUP B PASTE SITE</span>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+      <h1>Welcome to Group B's Paste Site!</h1>
+    </header>
+
+    <!-- Page Content -->
+    <div class="home-page">
+      <button class="create-button">
+        <a href={{url_for("create_page")}}>Create a New Paste</a>
+      </button>
+      <button class="view-button">
+        <a href={{url_for("view_page")}}>View All Pastes</a>
+      </button>
+    </div>
+
+  </body>
+</html>

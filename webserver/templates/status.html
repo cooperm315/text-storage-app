@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Status {{status}}</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={{url_for('static', filename="styles/main.css")}}>
+    <link rel="stylesheet" href={{url_for('static', filename="styles/status.css")}}>
+  </head>
+  <body>
+
+    <!-- Navigation Menu -->
+    <nav>
+      <div class="nav-menu">
+        <div class="nav-menu-item">
+          <a href={{url_for("home_page")}}>HOME</a>
+        </div>
+        <div class="nav-menu-item">
+          <a href={{url_for("create_page")}}>CREATE</a>
+        </div>
+        <div class="nav-menu-item">
+          <a href={{url_for("view_page")}}>VIEW</a>
+        </div>
+      </div>
+      <div class="nav-title">
+        <span>GROUP B PASTE SITE</span>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+      <h1>Status Code {{status}}</h1>
+    </header>
+
+    <div class="status-page">
+      <h2>{{message}}</h2>
+    </div>
+
+  </body>
+</html>

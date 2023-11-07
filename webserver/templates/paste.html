@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View Paste</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={{url_for('static', filename="styles/main.css")}}>
+    <link rel="stylesheet" href={{url_for('static', filename="styles/paste.css")}}>
+  </head>
+  <body>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <div class="nav-menu">
+          <div class="nav-menu-item">
+            <a href={{url_for("home_page")}}>HOME</a>
+          </div>
+          <div class="nav-menu-item">
+            <a href={{url_for("create_page")}}>CREATE</a>
+          </div>
+          <div class="nav-menu-item">
+            <a href={{url_for("view_page")}}>VIEW</a>
+          </div>
+        </div>
+        <div class="nav-title">
+          <span>GROUP B PASTE SITE</span>
+        </div>
+      </nav>
+  
+      <!-- Header -->
+      <header>
+        <h1>View Paste</h1>
+      </header>
+
+      <div class="paste-page">
+        <div class="paste">
+            <span class="paste-title">{{paste.get("title")}}</span>
+            by <span class="paste-author">{{paste.get("author")}}</span>
+            <p class="paste-content">{{paste.get("content")}}</p>
+            <span class="paste-timestamp">{{formatter(paste.get("createdAt"))}}</span>
+            Viewing Link: <a class="paste-link" href={{url_for("view_paste_page", view_id=paste.get("viewId"))}}>{{url_for("view_paste_page", view_id=paste.get("viewId"))}}</a>
+            {% if edit_id %}
+              <br/>Editing Link: <a class="paste-link" href={{url_for("edit_page", edit_id=edit_id)}}>{{url_for("edit_page", edit_id=edit_id)}}</a>
+            {% endif %}
+        </div>
+      </div>
+  </body>
+</html>

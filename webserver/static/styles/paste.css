@@ -1,0 +1,43 @@
+.paste-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.paste-page .paste {
+    background-color: var(--gray4);
+    border: .1rem solid var(--gray1);
+    width: 80%;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.paste-page .paste-title {
+    color: var(--unh-blue);
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.paste-page .paste-author {
+    color: var(--orange1);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.paste-page .paste-content {
+    overflow-wrap: break-word;
+}
+
+.paste-page .paste-timestamp {
+    color: var(--gray1);
+    font-weight: 600;
+    display: block;
+}
+
+.paste-page .paste-link {
+    color: var(--unh-blue);
+    text-decoration: none;
+    font-weight: 600;
+}
