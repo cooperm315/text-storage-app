@@ -9,7 +9,6 @@ mycol = None
 # Constants for the project
 DB_NAME = "groupB"
 COL_NAME = "records"
-CONNECTION_URL = "mongodb+srv://group-b:Keyboard_Warriors112@cluster0.twgidxv.mongodb.net/test"
 # CONNECTION_URL = "mongodb://localhost:27017/"
 
 def initialize() -> bool:
