@@ -1,6 +1,6 @@
 # Group Project B
 
-**Deployed at https://paste.unh.app**
+**Deployed at https://paste.unh.app** (Not Currently Running)
 
 ## Resources
 
